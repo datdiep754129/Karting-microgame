@@ -189,6 +189,7 @@ namespace KartGame.KartSystems
         public void SetCanMove(bool move) => m_CanMove = move;
         public float GetMaxSpeed() => Mathf.Max(m_FinalStats.TopSpeed, m_FinalStats.ReverseSpeed);
 
+   
         private void ActivateDriftVFX(bool active)
         {
             foreach (var vfx in m_DriftSparkInstances)
@@ -330,7 +331,7 @@ namespace KartGame.KartSystems
         void speedText()
         {
             float Acceleration = Mathf.Round(Rigidbody.velocity.magnitude * 2.237f);
-            speedometerText.SetText("Speed: " + Acceleration + " mph");
+            speedometerText.SetText("Speed: " + Acceleration + " mph");            
         }
         void GatherInputs()
         {
