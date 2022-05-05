@@ -11,8 +11,14 @@ public class AIRespawn : MonoBehaviour
     {
         if (other.tag == "savepoint")
         {
-            targets.Add(other.gameObject);
-            //rotateLocation = player.gameObject.transform.rotation;
+            if (targets.Count > 10)
+            {
+                targets.RemoveAt(0);
+            }
+            else
+            {
+                targets.Add(other.gameObject);
+            }
         }
         if (other.CompareTag("Respawn"))
         {

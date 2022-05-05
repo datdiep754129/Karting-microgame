@@ -330,8 +330,12 @@ namespace KartGame.KartSystems
 
         void speedText()
         {
-            float Acceleration = Mathf.Round(Rigidbody.velocity.magnitude * 2.237f);
-            speedometerText.SetText("Speed: " + Acceleration + " mph");            
+            if (CompareTag("Player"))
+            {
+
+                float Acceleration = Mathf.Round(Rigidbody.velocity.magnitude * 2.237f);
+                speedometerText.SetText("Speed: " + Acceleration + " mph");
+            }
         }
         void GatherInputs()
         {

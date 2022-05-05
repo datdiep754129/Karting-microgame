@@ -5,11 +5,19 @@ using UnityEngine;
 public class RespawnManager : MonoBehaviour
 {
     public List<GameObject> targets;
-    //public List<Quaternion> rotateLocation;
+    public List<Quaternion> rotateLocation;
     public bool hasCooldown;
     public int respawnCooldown = 3;
     //public GameObject players;
     [SerializeField] private Transform player;
+
+
+    public Vector3 rotate;
+
+    public Vector3 position;
+    //public float rotateX;
+    //public float rotateY;
+    //public float rotateZ;
     //[SerializeField] private Transform respawnPoint;
     // Start is called before the first frame update
     void Start()
@@ -17,8 +25,23 @@ public class RespawnManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void fixedUpdate()
+    void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.R) && hasCooldown == false)
+        {
+            for (int index = 0; index < targets.Count - 1; index++)
+            {
+                player.transform.position = targets[index].transform.position;
+                //player.transform.rotation = rotateLocation[index];
+                player.transform.position = position;
+                player.transform.Rotate(rotate);
+
+                Physics.SyncTransforms();
+                hasCooldown = true;
+                StartCoroutine(RespawnCooldown());
+            }
+        }
     }
     IEnumerator RespawnCooldown()
     {
@@ -30,33 +53,33 @@ public class RespawnManager : MonoBehaviour
     {
         if(other.tag == "savepoint")
         {
-            targets.Add(other.gameObject);
-           // rotateLocation.Add(other.transform.rotation);
-            Debug.Log(other.gameObject);
+            rotate = player.transform.eulerAngles;
+            position = player.transform.position;
+            if (targets.Count > 10)
+            {
+                targets.RemoveAt(0);
+                //rotateLocation.RemoveAt(0);
+            }
+            else
+            {
+                targets.Add(other.gameObject);
+                //rotate.Add(new Vector3(rotateX, rotateY, rotateZ));
+                //rotateLocation.Add(other.transform.rotation);
+
+            }
             //rotateLocation = player.gameObject.transform.rotation;
         }
         if (other.CompareTag("Respawn"))
         {
-            for(int index = 0; index < targets.Count-1; index++)
-            {
-                player.transform.position = targets[index].transform.position;
-               // player.transform.rotation = rotateLocation[index];
-                Physics.SyncTransforms();
-
-            }
-        }
-        /**       
-        if (Input.GetKeyDown(KeyCode.R) && hasCooldown == false)
-        {
             for (int index = 0; index < targets.Count - 1; index++)
             {
                 player.transform.position = targets[index].transform.position;
-                player.transform.rotation = rotateLocation[index];
+                //player.transform.rotation = rotateLocation[index].SetEulerRotation(1,2,3);
+                player.transform.position = position;
+                player.transform.Rotate(rotate);
                 Physics.SyncTransforms();
-                hasCooldown = true;
-                StartCoroutine(RespawnCooldown());
             }
+            
         }
-        **/
     }
 }
