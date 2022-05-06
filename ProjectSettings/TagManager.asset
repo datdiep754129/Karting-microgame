@@ -11,6 +11,8 @@ TagManager:
   - DisableTransparent
   - EnableTransparent2
   - EnableTransparent3
+  - Teleport_A
+  - Teleport_B
   layers:
   - Default
   - TransparentFX
