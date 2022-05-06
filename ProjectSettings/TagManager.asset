@@ -9,6 +9,8 @@ TagManager:
   - Player_Checkpoint
   - EnableTransparent
   - DisableTransparent
+  - EnableTransparent2
+  - EnableTransparent3
   layers:
   - Default
   - TransparentFX
