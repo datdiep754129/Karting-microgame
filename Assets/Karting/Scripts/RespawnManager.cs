@@ -55,17 +55,11 @@ public class RespawnManager : MonoBehaviour
         {
             rotate = player.transform.eulerAngles;
             position = player.transform.position;
+            targets.Add(other.gameObject);
             if (targets.Count > 10)
             {
                 targets.RemoveAt(0);
                 //rotateLocation.RemoveAt(0);
-            }
-            else
-            {
-                targets.Add(other.gameObject);
-                //rotate.Add(new Vector3(rotateX, rotateY, rotateZ));
-                //rotateLocation.Add(other.transform.rotation);
-
             }
             //rotateLocation = player.gameObject.transform.rotation;
         }
