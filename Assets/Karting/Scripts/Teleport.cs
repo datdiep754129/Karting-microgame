@@ -8,6 +8,7 @@ public class Teleport : MonoBehaviour
     public List<Transform> teleportPosition;
     public bool hasCooldown;
     public int respawnCooldown = 3;
+    public int index = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,17 +25,17 @@ public class Teleport : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        int index;
-        for(index = 0; index < teleportPosition.Count; index++)
+        if (other.CompareTag("Teleport_A") && hasCooldown == false)
         {
-            if (other.CompareTag("Teleport_A") && hasCooldown == false)
+            while (index < teleportPosition.Count)
             {
-                teleportTarget.transform.position = teleportPosition[index].transform.position;
                 hasCooldown = true;
                 StartCoroutine(RespawnCooldown());
+                teleportTarget.transform.position = teleportPosition[index].transform.position;
+                index++;
+                return;
             }
-
         }
-        
+
     }
 }

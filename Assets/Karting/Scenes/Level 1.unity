@@ -32175,15 +32175,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportTarget: {fileID: 1910917296}
   teleportPosition:
-  - {fileID: 1940866210}
   - {fileID: 566903141}
-  - {fileID: 1799181431}
   - {fileID: 1597639525}
   hasCooldown: 0
   respawnCooldown: 3
-  positionPlayer: {x: 0, y: 0, z: 0}
-  positionA: {x: 0, y: 0, z: 0}
-  positionB: {x: 0, y: 0, z: 0}
 --- !u!1 &1913434029
 GameObject:
   m_ObjectHideFlags: 0
