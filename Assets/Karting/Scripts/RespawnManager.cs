@@ -51,6 +51,7 @@ public class RespawnManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+       
         if(other.tag == "savepoint")
         {
             rotate = player.transform.eulerAngles;
@@ -62,7 +63,7 @@ public class RespawnManager : MonoBehaviour
                 //rotateLocation.RemoveAt(0);
             }
             //rotateLocation = player.gameObject.transform.rotation;
-        }
+        }        
         if (other.CompareTag("Respawn"))
         {
             for (int index = 0; index < targets.Count - 1; index++)
@@ -73,7 +74,7 @@ public class RespawnManager : MonoBehaviour
                 player.transform.Rotate(rotate);
                 Physics.SyncTransforms();
             }
-            
+
         }
     }
 }

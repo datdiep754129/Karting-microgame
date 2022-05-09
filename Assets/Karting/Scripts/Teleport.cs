@@ -5,13 +5,9 @@ using UnityEngine;
 public class Teleport : MonoBehaviour
 {
     public GameObject teleportTarget;
-    public Transform teleportPosition;
+    public List<Transform> teleportPosition;
     public bool hasCooldown;
     public int respawnCooldown = 3;
-
-    public Vector3 positionPlayer;
-    public Vector3 positionA;
-    public Vector3 positionB;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +16,6 @@ public class Teleport : MonoBehaviour
 
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
-    }
 
     IEnumerator RespawnCooldown()
     {
@@ -31,11 +24,16 @@ public class Teleport : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        int index;
+        for(index = 0; index < teleportPosition.Count; index++)
         {
-            teleportTarget.transform.position = teleportPosition.transform.position;
-            hasCooldown = true;
-            StartCoroutine(RespawnCooldown());
+            if (other.CompareTag("Teleport_A") && hasCooldown == false)
+            {
+                teleportTarget.transform.position = teleportPosition[index].transform.position;
+                hasCooldown = true;
+                StartCoroutine(RespawnCooldown());
+            }
+
         }
         
     }
