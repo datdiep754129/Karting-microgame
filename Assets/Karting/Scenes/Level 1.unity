@@ -17066,15 +17066,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b46e0920d9667ca45b59dc5301c885aa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.4
+      value: 101.9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b46e0920d9667ca45b59dc5301c885aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b46e0920d9667ca45b59dc5301c885aa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.55
+      value: 8.22
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b46e0920d9667ca45b59dc5301c885aa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17108,6 +17108,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 513acde94b58c0d49bfab03c801fc3bf, type: 2}
+    - target: {fileID: 8200000, guid: b46e0920d9667ca45b59dc5301c885aa, type: 3}
+      propertyPath: MinDistance
+      value: 0.39357376
+      objectReference: {fileID: 0}
     - target: {fileID: 13600000, guid: b46e0920d9667ca45b59dc5301c885aa, type: 3}
       propertyPath: m_Radius
       value: 2.5
@@ -32179,6 +32183,7 @@ MonoBehaviour:
   - {fileID: 1597639525}
   hasCooldown: 0
   respawnCooldown: 3
+  index: 0
 --- !u!1 &1913434029
 GameObject:
   m_ObjectHideFlags: 0
