@@ -10,10 +10,10 @@ public class Teleport : MonoBehaviour
     public bool hasCooldown;
     public int respawnCooldown = 3;
     public int index = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
 

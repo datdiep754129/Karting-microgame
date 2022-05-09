@@ -8,9 +8,17 @@ public class CustomGravity : MonoBehaviour
     public float gravityScale = 1f;
     public GameObject gravityTarget;
 
+    public bool hasCooldown;
+    public int respawnCooldown = 3;
+
     public static float globalGravity = -9.81f;
     Rigidbody m_rb;
 
+    IEnumerator RespawnCooldown()
+    {
+        yield return new WaitForSeconds(respawnCooldown);
+        hasCooldown = false;
+    }
     void OnEnable()
     {
         m_rb = GetComponent<Rigidbody>();
@@ -26,15 +34,19 @@ public class CustomGravity : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("GravityReverse_Up"))
+        if (other.CompareTag("GravityReverse_Up") && hasCooldown == false)
         {
-            gravityScale = 2;
+            hasCooldown = true;
+            StartCoroutine(RespawnCooldown());
+            gravityScale = 1.5f;
             gravityTarget.transform.Rotate(0, 0, 0);
 
         }
-        if (other.CompareTag("GravityReverse_Down"))
+        if (other.CompareTag("GravityReverse_Down") && hasCooldown == false)
         {
-            gravityScale = -2;
+            hasCooldown = true;
+            StartCoroutine(RespawnCooldown());
+            gravityScale = -1.5f;
             gravityTarget.transform.Rotate(0, 0, 180);
         }
     }
