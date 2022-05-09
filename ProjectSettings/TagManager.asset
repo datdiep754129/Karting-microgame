@@ -13,6 +13,8 @@ TagManager:
   - EnableTransparent3
   - Teleport_A
   - Teleport_B
+  - GravityReverse_Up
+  - GravityReverse_Down
   layers:
   - Default
   - TransparentFX

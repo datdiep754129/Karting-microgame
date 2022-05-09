@@ -6,6 +6,7 @@ using UnityEngine;
 public class CustomGravity : MonoBehaviour
 {
     public float gravityScale = 1f;
+    public GameObject gravityTarget;
 
     public static float globalGravity = -9.81f;
     Rigidbody m_rb;
@@ -21,5 +22,20 @@ public class CustomGravity : MonoBehaviour
     {
         Vector3 gravity = globalGravity * gravityScale * Vector3.up;
         m_rb.AddForce(gravity, ForceMode.Acceleration);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("GravityReverse_Up"))
+        {
+            gravityScale = 2;
+            gravityTarget.transform.Rotate(0, 0, 0);
+
+        }
+        if (other.CompareTag("GravityReverse_Down"))
+        {
+            gravityScale = -2;
+            gravityTarget.transform.Rotate(0, 0, 180);
+        }
     }
 }

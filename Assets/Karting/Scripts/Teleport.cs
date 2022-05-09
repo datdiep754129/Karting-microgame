@@ -5,7 +5,8 @@ using UnityEngine;
 public class Teleport : MonoBehaviour
 {
     public GameObject teleportTarget;
-    public List<Transform> teleportPosition;
+    public List<Transform> teleportPositionA;
+    public List<Transform> teleportPositionB;
     public bool hasCooldown;
     public int respawnCooldown = 3;
     public int index = 0;
@@ -27,13 +28,35 @@ public class Teleport : MonoBehaviour
     {
         if (other.CompareTag("Teleport_A") && hasCooldown == false)
         {
-            while (index < teleportPosition.Count)
+            while (index < teleportPositionA.Count)
             {
                 hasCooldown = true;
                 StartCoroutine(RespawnCooldown());
-                teleportTarget.transform.position = teleportPosition[index].transform.position;
+                teleportTarget.transform.position = teleportPositionA[index].transform.position;
                 index++;
                 return;
+            }
+            if(index == teleportPositionA.Count)
+            {
+                index =0;
+            }
+        }
+        if(other.CompareTag("Teleport_B") && hasCooldown == false)
+        {
+            if(index == 0)
+            {
+                index = teleportPositionB.Count;
+            }
+            else
+            {
+                while (index <= teleportPositionB.Count)
+                {
+                    hasCooldown = true;
+                    StartCoroutine(RespawnCooldown());
+                    index--;
+                    teleportTarget.transform.position = teleportPositionB[index].transform.position;
+                    return;
+                }
             }
         }
 
