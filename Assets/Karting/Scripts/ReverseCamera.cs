@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class Minimap : MonoBehaviour
+public class ReverseCamera : MonoBehaviour
 {
     public GameObject player;
     public Transform playerRotation;
@@ -17,13 +16,9 @@ public class Minimap : MonoBehaviour
     void LateUpdate()
     {
         Vector3 playerPosition = player.transform.position;
-        playerPosition.y = player.transform.position.y + 20;
-        //playerPosition.y = transform.position.y;
+        playerPosition.y = player.transform.position.y;
         transform.position = playerPosition;
 
-        
-
-        transform.rotation = Quaternion.Euler(90f, playerRotation.eulerAngles.y, 0f);
-
+        transform.rotation = Quaternion.Euler(playerRotation.eulerAngles.x, playerRotation.eulerAngles.y, playerRotation.eulerAngles.z);
     }
 }

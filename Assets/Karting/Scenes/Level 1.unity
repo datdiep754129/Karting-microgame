@@ -15610,7 +15610,7 @@ PrefabInstance:
     - target: {fileID: 5209091469959198656, guid: 5f7c5784d4776074089b56351be94b74,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5209091469959198656, guid: 5f7c5784d4776074089b56351be94b74,
         type: 3}
@@ -38000,6 +38000,22 @@ MonoBehaviour:
   hasCooldown: 0
   respawnCooldown: 3
   index: 0
+--- !u!114 &1910917316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910917296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12ffbb17b601684c91b464c4a3a3cb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityScale: 3
+  gravityTarget: {fileID: 1910917296}
+  hasCooldown: 0
+  respawnCooldown: 3
 --- !u!1 &1913434029
 GameObject:
   m_ObjectHideFlags: 0
