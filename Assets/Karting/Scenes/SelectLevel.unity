@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 406530147}
   - component: {fileID: 406530146}
   - component: {fileID: 406530145}
-  - component: {fileID: 406530144}
+  - component: {fileID: 406530149}
   m_Layer: 5
   m_Name: Endless
   m_TagString: Untagged
@@ -532,19 +532,6 @@ RectTransform:
   m_AnchoredPosition: {x: 450, y: -25.5}
   m_SizeDelta: {x: 230, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &406530144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 406530142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fb0be89f0d0b38469396506a9e54beb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: MainScene
 --- !u!114 &406530145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,7 +576,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 406530144}
+      - m_Target: {fileID: 406530149}
         m_TargetAssemblyTypeName: KartGame.UI.LoadSceneButton, KartGame
         m_MethodName: LoadTargetScene
         m_Mode: 1
@@ -639,6 +626,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406530142}
   m_CullTransparentMesh: 1
+--- !u!114 &406530149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406530142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb0be89f0d0b38469396506a9e54beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: Playmode_4
 --- !u!1 &508084166
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,7 +966,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -165, y: 50}
+  m_AnchoredPosition: {x: -167.5, y: 50}
   m_SizeDelta: {x: 230, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &761753962
@@ -1224,7 +1224,7 @@ GameObject:
   - component: {fileID: 1180856064}
   - component: {fileID: 1180856063}
   - component: {fileID: 1180856062}
-  - component: {fileID: 1180856061}
+  - component: {fileID: 1180856066}
   m_Layer: 5
   m_Name: Checkpoint
   m_TagString: Untagged
@@ -1253,19 +1253,6 @@ RectTransform:
   m_AnchoredPosition: {x: 150, y: -25.5}
   m_SizeDelta: {x: 230, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1180856061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180856059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fb0be89f0d0b38469396506a9e54beb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: MainScene
 --- !u!114 &1180856062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,7 +1297,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1180856061}
+      - m_Target: {fileID: 1180856066}
         m_TargetAssemblyTypeName: KartGame.UI.LoadSceneButton, KartGame
         m_MethodName: LoadTargetScene
         m_Mode: 1
@@ -1360,6 +1347,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180856059}
   m_CullTransparentMesh: 1
+--- !u!114 &1180856066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180856059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb0be89f0d0b38469396506a9e54beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: Playmode_1
 --- !u!1 &1208332914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1687,7 +1687,7 @@ GameObject:
   - component: {fileID: 1601927010}
   - component: {fileID: 1601927009}
   - component: {fileID: 1601927008}
-  - component: {fileID: 1601927007}
+  - component: {fileID: 1601927012}
   m_Layer: 5
   m_Name: ObjectiveLaps
   m_TagString: Untagged
@@ -1716,19 +1716,6 @@ RectTransform:
   m_AnchoredPosition: {x: -150, y: -25.5}
   m_SizeDelta: {x: 230, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1601927007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601927005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fb0be89f0d0b38469396506a9e54beb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: MainScene
 --- !u!114 &1601927008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1773,7 +1760,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1601927007}
+      - m_Target: {fileID: 1601927012}
         m_TargetAssemblyTypeName: KartGame.UI.LoadSceneButton, KartGame
         m_MethodName: LoadTargetScene
         m_Mode: 1
@@ -1823,6 +1810,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601927005}
   m_CullTransparentMesh: 1
+--- !u!114 &1601927012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601927005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb0be89f0d0b38469396506a9e54beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: Playmode_2
 --- !u!1 &1632101714
 GameObject:
   m_ObjectHideFlags: 0
@@ -2644,7 +2644,7 @@ GameObject:
   - component: {fileID: 2095272375}
   - component: {fileID: 2095272374}
   - component: {fileID: 2095272373}
-  - component: {fileID: 2095272372}
+  - component: {fileID: 2095272377}
   m_Layer: 5
   m_Name: Collect
   m_TagString: Untagged
@@ -2673,19 +2673,6 @@ RectTransform:
   m_AnchoredPosition: {x: -450, y: -25.5}
   m_SizeDelta: {x: 230, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2095272372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095272370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fb0be89f0d0b38469396506a9e54beb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: MainScene
 --- !u!114 &2095272373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2730,7 +2717,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2095272372}
+      - m_Target: {fileID: 2095272377}
         m_TargetAssemblyTypeName: KartGame.UI.LoadSceneButton, KartGame
         m_MethodName: LoadTargetScene
         m_Mode: 1
@@ -2780,6 +2767,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095272370}
   m_CullTransparentMesh: 1
+--- !u!114 &2095272377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095272370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb0be89f0d0b38469396506a9e54beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: Playmode_3
 --- !u!1 &2132715943
 GameObject:
   m_ObjectHideFlags: 0
