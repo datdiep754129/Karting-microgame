@@ -8,7 +8,7 @@ public class Teleport : MonoBehaviour
     public List<Transform> teleportPositionA;
     public List<Transform> teleportPositionB;
     public bool hasCooldown;
-    public int respawnCooldown = 3;
+    public int respawnCooldown = 5;
     public int index = 0;
 
     // Start is called before the first frame update
