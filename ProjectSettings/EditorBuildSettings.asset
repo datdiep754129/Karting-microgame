@@ -44,4 +44,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Karting/Scenes/Level 1_Endless.unity
     guid: 8a7453e3910094f4ea6503cfb218356d
+  - enabled: 1
+    path: Assets/Karting/Scenes/Level 3_Collect.unity
+    guid: 4d9571d0aeb88e442aac94d10cb07fcd
+  - enabled: 1
+    path: Assets/Karting/Scenes/Level 3.unity
+    guid: bea29b318e11a3942835eeeb042accab
+  - enabled: 1
+    path: Assets/Karting/Scenes/Level 3_Checkpoint.unity
+    guid: 3ab97cbd18cbe614e96d85c9308002f5
+  - enabled: 1
+    path: Assets/Karting/Scenes/Level 3_Endless.unity
+    guid: 45d929372600b9a408db5a33a97fffad
   m_configObjects: {}

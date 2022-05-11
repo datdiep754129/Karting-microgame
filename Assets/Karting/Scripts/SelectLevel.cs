@@ -5,21 +5,4 @@ using UnityEngine.UI;
 
 public class SelectLevel : MonoBehaviour
 {
-    private Button button;
-    private GameManager gameManager;
-    public int difficulty;
-    // Start is called before the first frame update
-    void Start()
-    {
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-        button = GetComponent<Button>();
-        button.onClick.AddListener(SetDifficulty);
-
-    }
-
-    void SetDifficulty()
-    {
-        Debug.Log(button.gameObject.name + " was clicked");
-        gameManager.StartGame(difficulty);
-    }
 }
